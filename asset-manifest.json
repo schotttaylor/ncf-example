@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/ncf-example/static/css/main.d6a35b9f.css",
+    "main.js": "/ncf-example/static/js/main.781ed4df.js",
+    "static/js/787.50d9d423.chunk.js": "/ncf-example/static/js/787.50d9d423.chunk.js",
+    "index.html": "/ncf-example/index.html",
+    "main.d6a35b9f.css.map": "/ncf-example/static/css/main.d6a35b9f.css.map",
+    "main.781ed4df.js.map": "/ncf-example/static/js/main.781ed4df.js.map",
+    "787.50d9d423.chunk.js.map": "/ncf-example/static/js/787.50d9d423.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.d6a35b9f.css",
+    "static/js/main.781ed4df.js"
+  ]
+}
