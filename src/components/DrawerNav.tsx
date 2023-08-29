@@ -8,6 +8,7 @@ import ListItemIcon from '@mui/material/ListItemIcon';
 import ListItemText from '@mui/material/ListItemText';
 import MailIcon from '@mui/icons-material/Mail';
 import Toolbar from '@mui/material/Toolbar';
+import { Avatar, Chip } from '@mui/material';
 
 const drawerWidth = 184;
 
@@ -24,23 +25,18 @@ const DrawerNav = (props: Props) => {
 
   const drawer = (
     <div>
-      <Toolbar />
-      <Divider />
+      <div className="drawer-header"><span style={{fontWeight: 700}}>my</span>giving</div>
+      <div className="profile-block">
+        <Avatar className="profile-avatar" src="./images/face-4.png" />
+        <div className="profile-name">Louis Carter</div>
+        <Chip
+          className="profile-chip"
+          label="Edit"
+          variant="outlined"
+        />
+      </div>
       <List>
-        {['Inbox', 'Starred', 'Send email', 'Drafts'].map((text, index) => (
-          <ListItem key={text} disablePadding>
-            <ListItemButton>
-              <ListItemIcon>
-                {index % 2 === 0 ? <InboxIcon /> : <MailIcon />}
-              </ListItemIcon>
-              <ListItemText primary={text} />
-            </ListItemButton>
-          </ListItem>
-        ))}
-      </List>
-      <Divider />
-      <List>
-        {['All mail', 'Trash', 'Spam'].map((text, index) => (
+        {['Home', 'Grant', 'Give', 'Favorites', 'Activity', 'Legacy'].map((text, index) => (
           <ListItem key={text} disablePadding>
             <ListItemButton>
               <ListItemIcon>
@@ -75,7 +71,7 @@ const DrawerNav = (props: Props) => {
         variant="permanent"
         sx={{
           display: { xs: 'none', sm: 'block' },
-          '& .MuiDrawer-paper': { boxSizing: 'border-box', width: drawerWidth },
+          '& .MuiDrawer-paper': { boxSizing: 'border-box', width: drawerWidth, borderRight: 'none' },
         }}
         open
       >

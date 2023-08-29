@@ -9,6 +9,7 @@ import Typography from '@mui/material/Typography';
 import DrawerNav from './DrawerNav';
 import { SelectChangeEvent } from '@mui/material/Select';
 import SearchIcon from "@mui/icons-material/Search";
+import ArrowForwardRoundedIcon from '@mui/icons-material/ArrowForwardRounded';
 
 import { Avatar, Card, Chip, FormControl, InputAdornment, MenuItem, OutlinedInput, Select, Tab, Tabs, TextField } from '@mui/material';
 
@@ -104,9 +105,9 @@ const Layout = (props: Props) => {
         <div className="middle">
           <Toolbar className="tab-bar">
             <Tabs value={value} onChange={handleChange}>
-              <Tab label="Send a grant" />
-              <Tab label="Recurring schedules" />
-              <Tab label="History" />
+              <Tab label="Send a grant" style={{textTransform: 'unset', fontSize: 22}} />
+              <Tab label="Recurring schedules" style={{textTransform: 'unset', fontSize: 22}} />
+              <Tab label="History" style={{textTransform: 'unset', fontSize: 22}} />
             </Tabs>
           </Toolbar>
           <Card className="card step-card">
@@ -163,31 +164,41 @@ const Layout = (props: Props) => {
               />
             </div>
             <Typography className="label" paragraph>Recently supported</Typography>
-            <div className="card-row" style={{justifyContent: 'flex-start'}}>
-              <Chip
-                avatar={<Avatar alt="Chino Valley Community Church" src="/images/Ellipse-6564.png" />}
-                className="charity-chip"
-                label="Chino Valley Community Church"
-                variant="outlined"
-              />
-              <Chip
-                avatar={<Avatar alt="Natacha" src="/images/Ellipse-6566.png" />}
-                className="charity-chip"
-                label="The salvation army"
-                variant="outlined"
-              />
-              <Chip
-                avatar={<Avatar alt="Natacha" src="/images/Group-1484578309.png" />}
-                className="charity-chip"
-                label="Serge (World Harvest Mission)"
-                variant="outlined"
-              />
-              <Chip
-                avatar={<Avatar alt="Natacha" src="/images/Group-1484578309.png" />}
-                className="charity-chip"
-                label="Serge (World Harvest Mission)"
-                variant="outlined"
-              />
+            <div className="card-row" style={{justifyContent: 'flex-start', whiteSpace: 'nowrap', height: 48, marginBottom: 0}}>
+              <div className="carousel-frame">
+                <Chip
+                  avatar={<Avatar alt="Chino Valley Community Church" src="./images/Ellipse-6564.png" />}
+                  className="charity-chip"
+                  label="Chino Valley Community Church"
+                  variant="outlined"
+                />
+                <Chip
+                  avatar={<Avatar alt="Natacha" src="./images/Ellipse-6566.png" />}
+                  className="charity-chip"
+                  label="The salvation army"
+                  variant="outlined"
+                />
+                <Chip
+                  avatar={<Avatar alt="Natacha" src="./images/Group-1484578309.png" />}
+                  className="charity-chip"
+                  label="Serge (World Harvest Mission)"
+                  variant="outlined"
+                />
+                <Chip
+                  avatar={<Avatar alt="Natacha" src="./images/Group-1484578309.png" />}
+                  className="charity-chip"
+                  label="Serge (World Harvest Mission)"
+                  variant="outlined"
+                />
+                <div className="fade-arrow">
+                <Chip
+                  label={<ArrowForwardRoundedIcon />}
+                  variant="outlined"
+                  className="arrow-chip"
+                  style={{color: '#05192C'}}
+                />
+                </div>
+              </div>
             </div>
           </Card>
         </div>

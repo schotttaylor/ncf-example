@@ -1,7 +1,6 @@
-@import url('https://fonts.googleapis.com/css2?family=Aguafina+Script&family=Hurricane&family=Inspiration&family=Inter:wght@400;400i;700;700i&family=Kaushan+Script&family=Shalimar&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Aguafina+Script&family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400;1,9..40,500;1,9..40,600;1,9..40,700&family=Hurricane&family=Inspiration&family=Inter:wght@400;500;600;700&family=Kaushan+Script&family=Shalimar&display=swap');
-.css-z2eky3-MuiTypography-root {
-  font-family: 'Inter', sans-serif;
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400;1,9..40,500;1,9..40,600;1,9..40,700&family=Inter:wght@400;700&display=swap');
+.MuiTypography-root {
+  font-family: 'DM Sans', sans-serif;
   font-weight: 500;
   font-size: 16px;
 }
@@ -36,6 +35,28 @@ main {
 .css-13hbcws {
   padding: 8px;
 }
+.drawer-header {
+  font-family: 'Inter', sans-serif;
+  margin-top: 36px;
+  margin-bottom: 56px;
+  font-size: 28px;
+  font-style: italic;
+  color: #1599DA
+}
+.profile-block {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 32px;
+}
+.profile-avatar {
+  height: 80px;
+  width: 80px;
+}
+.profile-name {}
+.profile-chip {}
 .middle {
   order:1; 
   flex-basis:100%; 
@@ -50,6 +71,7 @@ main {
 .card {
   padding: 32px;
   border-radius: 16px;
+  box-shadow: none;
 }
 .step-card {
   display: flex;
@@ -82,32 +104,39 @@ main {
   font-weight: 700;
   margin-bottom: 0;
 }
-.css-hyum1k-MuiToolbar-root.tab-bar  {
+.MuiToolbar-root.tab-bar  {
   padding-left: 0;
   font-size: 22px;
   line-height: 29px;
   margin-bottom: 32px;
 }
 
-.css-hyum1k-MuiToolbar-root.tab-bar .css-1h9z7r5-MuiButtonBase-root-MuiTab-root {
+.MuiToolbar-root.tab-bar .MuiButtonBase-root-MuiTab-root {
   font-size: 22px;
   font-weight: 500;
 }
 
-.css-hyum1k-MuiToolbar-root.tab-bar .css-1h9z7r5-MuiButtonBase-root-MuiTab-root.Mui-selected {
+.MuiToolbar-root.tab-bar .MuiButtonBase-root-MuiTab-root.Mui-selected {
   font-weight: 700;
 }
-
+.Mui-selected {
+  color: #05192C !important;
+  font-weight: 700;
+}
+.MuiTabs-indicator {
+  background-color: #05192C !important;
+}
 .select {
   border-radius: 16px;
   margin-top: 0;
   margin: 0;
   min-width: 398px;
+  text-align: left;
 }
 .search {
   color: #1599DA;
 }
-.search .css-1q6at85-MuiInputBase-root-MuiOutlinedInput-root {
+.search .MuiInputBase-root-MuiOutlinedInput-root {
   border-radius: 28px;
   min-width: 234px;
   font-weight: 700;
@@ -120,7 +149,7 @@ main {
 .search-icon {
   color: #1599DA;
 }
-.search .css-aeeyth-MuiInputBase-input-MuiOutlinedInput-input::-webkit-input-placeholder {
+.search .MuiInputBase-input-MuiOutlinedInput-input::-webkit-input-placeholder {
   opacity: 1;
 }
 .search .MuiInputBase-input {
@@ -131,18 +160,44 @@ main {
   padding: 0px;
   border-radius: 24px;
   font-size: 14px;
-  width: 204px;
+  width: 187px;
   white-space: break-spaces;
   text-align: left;
+  min-width: 187px;
 }
-.css-1dsq9pb-MuiChip-root .MuiChip-avatar  {
+.MuiChip-root .MuiChip-avatar  {
   height: 40px;
   width: 40px;
 }
-.css-1dsq9pb-MuiChip-root .MuiChip-label {
+.MuiChip-root .MuiChip-label {
   white-space: break-spaces;
   text-align: left;
 }
+.carousel-frame {
+  height: 48px;
+  max-width: 688px;
+  position: relative;
+  overflow: auto;
+  display: flex;
+  justify-content: space-between;
+  gap: 8px;
+}
+.fade-arrow {
+  background: linear-gradient(to right, rgba(255,255,255,0) 0%,rgba(255,255,255,1) 36%,rgba(255,255,255,1) 100%);
+  height: 48px;
+  min-width: 96px;
+  right: 0;
+  top: 0;
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+.arrow-chip {
+  background-color: #FFF;
+  color: #05192C
+}
+
 @media screen and (min-width:1024px) {
   main {
     flex-wrap:nowrap;
