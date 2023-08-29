@@ -2,12 +2,15 @@
   "name": "ncf-example",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://schottsol.github.io/ncf-example/",
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "cypress:open": "cypress open"
+    "cypress:open": "cypress open",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "dependencies": {
     "@emotion/react": "^11.11.1",
